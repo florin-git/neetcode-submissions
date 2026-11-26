@@ -1,0 +1,13 @@
+class Solution:
+    # time: O(n)
+    # space: O(n)
+    def climbStairs(self, n: int) -> int:
+
+        first, second = 1, 1
+
+        for i in range(2, n + 1):
+            temp = first + second
+            first = second
+            second = temp
+
+        return second
